@@ -9,6 +9,8 @@ import './style.scss';
 function BudgetList() {
   const { id } = useSelector((state) => state.auth.userData);
   const { t } = useTranslation();
+
+  // Ici on utilise une requête nommée 'budgets
   const { isLoading, isError, data } = useQuery('budgets', {
     queryFn: () =>
       api.get('/budgets', { params: { sort: '-created_at,id' }, user_id: id }),
