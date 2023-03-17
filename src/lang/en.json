@@ -106,6 +106,9 @@
         "fields": {
           "name": {
             "title": "Transaction name"
+          },
+          "amount": {
+            "title": "Transaction amount"
           }
         },
         "buttons": {
