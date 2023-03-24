@@ -16,8 +16,7 @@ function CategoryList() {
   } = useQuery('categories', {
     queryFn: async () => {
       const { data } = await api.get('/categories', {
-        params: { sort: '-created_at,id' },
-        user_id: id,
+        params: { sort: '-created_at,id', user_id: id },
       });
       return data;
     },
